@@ -1,0 +1,30 @@
+// Reset
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
+@import "../libs/bootstrap/css/bootstrap.css";
+@import "../libs/scroller/css/jquery.mCustomScrollbar.css";
+@import "../libs/wowjs/css/animate.css";
+@import "../libs/slick_slider/css/slick.css";
+@import "../libs/slick_slider/css/slick-theme.css";
+
+// Common
+@import "_mixin/function";
+@import "_mixin/reset";
+@import "_mixin/common";
+@import "_mixin/table";
+@import "_mixin/button";
+@import "_mixin/pagination";
+@import "_mixin/breadcrumb";
+
+// Component
+@import "_components/header";
+@import "_components/footer";
+@import "_components/sidebar";
+
+// Page
+@import "_pages/home";
+@import "_pages/clinic";
+@import "_pages/information";
+@import "_pages/access";
+@import "_pages/information-detail";
+@import "_pages/service";
+@import "_pages/staff";

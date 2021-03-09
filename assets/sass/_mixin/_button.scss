@@ -1,0 +1,77 @@
+.button {
+  a {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: url('../images/button_web.png');
+    border-radius: 22.5px;
+    height: 45px;
+    text-align: center;
+    color: #ffffff;
+    padding: 10px 20px 10px 10px;
+    min-width: 165px;
+    -webkit-box-shadow: 3px 5px 5px 0px rgba(63,41,29,0.4);
+    -moz-box-shadow: 3px 5px 5px 0px rgba(63,41,29,0.4);
+    box-shadow: 3px 5px 5px 0px rgba(63,41,29,0.4);
+    transition: 0.3s;
+    &.arrow {
+      &:after {
+        content: '';
+        position: absolute;
+        border-radius: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: 0.3s;
+      }
+      &:not(.arrow-target) {
+        &:after {
+          background: url('../images/arrow.png') no-repeat center center / cover;
+        }
+      }
+      &.arrow-target {
+        &:after {
+          background: url('../images/arrow_target.png') no-repeat center center / cover;
+        }
+      }
+    }
+    &:hover {
+      text-decoration: none;
+      &:after {
+        right: 5px;
+      }
+    }
+  }
+}
+
+@media ( min-width: 768px ) {
+  .button {
+    a {
+      border-radius: 22.5px;
+      height: 45px;
+      min-width: 165px;
+      letter-spacing: 2px;
+      &:after {
+        width: 20px;
+        height: 20px;
+        right: 10px;
+      }
+    }
+  }
+}
+
+@media ( max-width: 767px ) {
+  .button {
+    a {
+      border-radius: vw(35, 750);
+      height: vw(70, 750);
+      min-width: vw(340, 750);
+      letter-spacing: vw(2, 750);
+      &:after {
+        width: vw(32, 750);
+        height: vw(32, 750);
+        right: vw(18, 750);
+      }
+    }
+  }
+}
